@@ -1,0 +1,597 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(1, 1, 20, 0.943);
+    font-family: 'Arial', sans-serif;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* --- Header --- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 9%;
+    /* Thoda compact kiya */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: rgba(1, 1, 20, 0.98);
+    /* Opacity badhai taaki text piche na dikhe */
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    height: 80px;
+    /* Fixed height di taaki calculation aasan ho */
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: crimson;
+}
+
+#menu-icon {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+/* --- Main Section --- */
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0 9%;
+    gap: 50px;
+    /* Desktop par default padding theek hai kyunki flex center hai */
+}
+
+.main {
+    max-width: 600px;
+}
+
+.main h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.main h1 {
+    font-size: 50px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+/* Animation Typing Text */
+.typing-text {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.typing-text span {
+    color: crimson;
+    display: inline-block;
+    border-right: 3px solid white;
+    overflow: hidden;
+    white-space: nowrap;
+    vertical-align: middle;
+    width: 15ch;
+    animation: Typing 3s steps(15) infinite, Blink 1s infinite;
+}
+
+@keyframes Typing {
+    from {
+        width: 0ch;
+    }
+
+    to {
+        width: 15ch;
+    }
+}
+
+@keyframes Blink {
+    0%,
+    50%,
+    100% {
+        border-color: crimson;
+    }
+
+    25%,
+    75% {
+        border-color: transparent;
+    }
+}
+
+.p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgb(209, 209, 209);
+}
+
+.image img {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    border: 4px solid crimson;
+    box-shadow: 0 0 20px crimson;
+    object-fit: cover;
+    transition: 0.4s ease;
+}
+
+.image img:hover {
+    transform: scale(1.05);
+}
+
+/* --- About Section --- */
+#about {
+    background-color: rgba(1, 1, 20, 0.98);
+    flex-direction: row-reverse;
+}
+
+.about-img img {
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
+    border: 4px solid crimson;
+    box-shadow: 0 0 20px crimson;
+    object-fit: cover;
+}
+
+.about {
+    max-width: 600px;
+    text-align: left;
+}
+
+.about h2 {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.about h2 span {
+    color: crimson;
+}
+
+.about h3 {
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.about p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgb(209, 209, 209);
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: crimson;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px crimson;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: transparent;
+    color: crimson;
+    border: 2px solid crimson;
+    box-shadow: none;
+}
+
+/* --- Project Section --- */
+#Project {
+    flex-direction: column;
+    padding-top: 100px;
+    margin-bottom: 50px;
+}
+
+.heading {
+    font-size: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.heading span {
+    color: crimson;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.project-box {
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 0 0 15px crimson;
+    overflow: hidden;
+    height: 250px;
+    display: flex;
+}
+
+.project-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.project-box:hover img {
+    transform: scale(1.1);
+}
+
+.project-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), crimson);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 20px;
+    transform: translateX(100%);
+    transition: 0.5s;
+}
+
+.project-box:hover .project-layer {
+    transform: translateX(0);
+}
+
+.project-layer h4 {
+    font-size: 25px;
+    margin-bottom: 10px;
+    color: rgb(0, 0, 0);
+}
+
+.project-layer p {
+    font-size: 17px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    margin-bottom: 15px;
+}
+
+.project-layer a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: white;
+    border-radius: 50px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* --- Service Section --- */
+#service {
+    flex-direction: column;
+    padding-top: 100px;
+    /* Thoda space badhaya */
+    background-color: rgba(1, 1, 20, 0.98);
+    padding-bottom: 100px;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    width: 100%;
+    max-width: 1100px;
+}
+
+.service-box {
+    background: rgba(1, 1, 20, 0.943);
+    padding: 30px 20px;
+    border-radius: 20px;
+    text-align: center;
+    border: 2px solid crimson;
+    transition: 0.5s ease;
+    box-shadow: 0 0 10px rgba(220, 20, 60, 0.3);
+}
+
+.service-box:hover {
+    background: crimson;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px crimson;
+}
+
+.service-box i {
+    font-size: 50px;
+    color: crimson;
+    margin-bottom: 15px;
+    transition: 0.5s;
+}
+
+.service-box:hover i {
+    color: white;
+}
+
+.service-box h3 {
+    font-size: 27px;
+    margin-bottom: 15px;
+    transition: 0.5s;
+}
+
+.service-box:hover h3 {
+    color: white;
+}
+
+.service-box p {
+    font-size: 16px;
+    color: #d1d1d1;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    transition: 0.5s;
+}
+
+.service-box:hover p {
+    color: black;
+}
+
+.service-box .btn {
+    box-shadow: none;
+}
+
+.service-box:hover .btn {
+    background: white;
+    color: crimson;
+    border: 2px solid white;
+}
+
+/* --- Contact Section --- */
+#contact {
+    flex-direction: column;
+    padding-top: 100px;
+    /* Thoda space badhaya */
+    padding-bottom: 50px;
+}
+
+#contact form {
+    max-width: 700px;
+    width: 100%;
+    text-align: center;
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    width: 49%;
+}
+
+.input-box input,
+.input-group-2 textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.input-box input:focus,
+.input-group-2 textarea:focus {
+    border-color: crimson;
+    background: rgba(1, 1, 20, 1);
+}
+
+.input-group-2 textarea {
+    resize: none;
+}
+
+.input-group-2 .btn {
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* --- Footer --- */
+.footer {
+    background-color: rgba(1, 1, 20, 0.98);
+    padding: 20px 0;
+    text-align: center;
+    margin-top: auto;
+}
+
+.social a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid crimson;
+    border-radius: 50%;
+    font-size: 20px;
+    color: crimson;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: 0.5s;
+}
+
+.social a:hover {
+    background: crimson;
+    color: white;
+    box-shadow: 0 0 10px crimson;
+}
+
+.copyright {
+    margin-top: 15px;
+    font-size: 14px;
+    color: rgb(209, 209, 209);
+}
+
+/* =========================================
+           RESPONSIVE CSS (Media Queries)
+           ========================================= */
+
+@media (max-width: 991px) {
+    .header {
+        padding: 15px 3%;
+    }
+
+    section {
+        padding: 0 3%;
+        padding-top: 80px;
+        /* Tablet pe bhi thoda space */
+    }
+
+    .main h1 {
+        font-size: 40px;
+    }
+
+    .project-container {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Header & Menu */
+    #menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background-color: rgba(1, 1, 20, 0.98);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        display: block;
+        font-size: 20px;
+        margin: 20px 0;
+    }
+
+    /* --- MAIN ISSUE FIX: Section Padding --- */
+    section {
+        flex-direction: column;
+        gap: 30px;
+        min-height: auto;
+        /* Height auto kardi mobile ke liye */
+        padding-top: 120px;
+        /* Header ke niche se text shuru hoga */
+        padding-bottom: 50px;
+    }
+
+    .main {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .main h1 {
+        font-size: 35px;
+    }
+
+    .typing-text {
+        font-size: 22px;
+    }
+
+    .image img {
+        width: 70vw;
+        height: 70vw;
+        max-width: 300px;
+        max-height: 300px;
+    }
+
+    /* About Section Adjustment */
+    #about {
+        flex-direction: column;
+        padding-top: 100px;
+    }
+
+    .about-img img {
+        width: 70vw;
+        height: 70vw;
+        margin-top: 20px;
+    }
+
+    .about {
+        text-align: center;
+    }
+
+    /* Projects Section */
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* Contact Form */
+    .input-box {
+        width: 100%;
+    }
+}
+
+@media (max-width: 450px) {
+    .header {
+        padding: 15px 3%;
+    }
+
+    .main h1 {
+        font-size: 28px;
+    }
+
+    .about h2 {
+        font-size: 35px;
+    }
+
+    .heading {
+        font-size: 35px;
+    }
+}

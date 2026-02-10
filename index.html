@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nil Sanghani - Portfolio</title>
+
+    <link rel="stylesheet" href="index.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">Portfolio.</div>
+
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+
+        <nav class="nav-links">
+            <a href="#home" onclick="closeMenu()">Home</a>
+            <a href="#about" onclick="closeMenu()">About</a>
+            <a href="#Project" onclick="closeMenu()">Project</a>
+            <a href="#service" onclick="closeMenu()">Service</a>
+            <a href="#contact" onclick="closeMenu()">Contact</a>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="main">
+            <h3>Hello, It's Me</h3>
+            <h1>Sanghani Nil</h1>
+            <div class="typing-text">I'm a <span>Web Developer</span></div>
+
+            <p class="p">
+                I am Nil Sanghani, a BCA Student from H. J. Doshi College, Saurashtra University.
+                I consider myself a responsible and orderly person. I am a Web Developer with a passion
+                for building clean and responsive websites. I enjoy turning complex coding challenges
+                into simple, user-friendly designs.
+            </p>
+        </div>
+
+        <div class="image">
+            <img src="Nil.jpeg" alt="Nil Sanghani">
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="about-img">
+            <img src="N.jpeg" alt="Nil Sanghani">
+        </div>
+
+        <div class="about">
+            <h2>About <span>Me</span></h2><br><br>
+            <h3>BCA Student & Web Developer</h3>
+            <p>
+                I am currently pursuing my BCA at H. J. Doshi College, Saurashtra University.
+                My journey in web development started with a curiosity about how websites are built,
+                and it has now turned into a passion. I specialize in HTML, CSS, and creating responsive user
+                interfaces.
+                <br><br>
+                I love designing websites that are not only visually appealing but also easy to use.
+                Apart from coding, I enjoy exploring new creative designs and keeping up with the latest web trends.
+            </p>
+            <a href="#" class="btn">Read More</a>
+        </div>
+    </section>
+
+    <section id="Project">
+        <h2 class="heading">My <span>Projects</span></h2>
+
+        <div class="project-container">
+
+            <div class="project-box">
+                <img src="Brass img.png" alt="Project 1">
+                <div class="project-layer">
+                    <h4>Khodiyal Brass Items</h4>
+                    <p>Business website for showcasing brass products.</p>
+                    <a href="W-Brass Items business/index.html" target="_blank">View</a>
+                </div>
+            </div>
+
+            <div class="project-box">
+                <img src="Port. 1.1.png" alt="Project 2">
+                <div class="project-layer">
+                    <h4>Portfolio-1 Website</h4>
+                    <p>My personal portfolio to show my skills.</p>
+                    <a href="W-Portfolio 1.1/Index.html" target="_blank">View</a>
+                </div>
+            </div>
+
+            <div class="project-box">
+                <img src="Port. 1.png" alt="Project 3">
+                <div class="project-layer">
+                    <h4>Portfolio-1.1 Website</h4>
+                    <p>My personal portfolio to show my skills.</p>
+                    <a href="W-Portfolio 1/Portf 1.html" target="_blank">View</a>
+                </div>
+            </div>
+
+            <div class="project-box">
+                <img src="Port. 2.png" alt="Project 4">
+                <div class="project-layer">
+                    <h4>Portfolio-2 Website</h4>
+                    <p>My personal portfolio to show my skills.</p>
+                    <a href="W-Portfolio 2/index.html" target="_blank">View</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="service">
+        <h2 class="heading">My <span>Services</span></h2>
+
+        <div class="services">
+
+            <div class="service-box">
+                <i class="fa-solid fa-code"></i>
+                <h3>Web Development</h3>
+                <p>Building fast, responsive, and secure websites using HTML and CSS efficiently.</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+
+            <div class="service-box">
+                <i class="fa-solid fa-paintbrush"></i>
+                <h3>Creative Design</h3>
+                <p>Creating unique digital designs and artwork for logos, branding, and Redbubble products.</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+
+            <div class="service-box">
+                <i class="fa-solid fa-mobile-screen"></i>
+                <h3>Responsive Design</h3>
+                <p>Ensuring websites look perfect on all devices, from mobile phones to desktops.</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="heading">Contact <span>Me</span></h2>
+
+        <form id="whatsappForm">
+            <div class="input-group">
+                <div class="input-box">
+                    <input type="text" id="name" placeholder="Full Name" required>
+                    <input type="email" id="email" placeholder="Email Address" required>
+                </div>
+                <div class="input-box">
+                    <input type="number" id="mobile" placeholder="Mobile Number" required>
+                    <input type="text" id="subject" placeholder="Email Subject" required>
+                </div>
+            </div>
+
+            <div class="input-group-2">
+                <textarea id="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                <input type="button" value="Send Message" class="btn" onclick="sendToWhatsapp()">
+            </div>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="social">
+            <a href="https://www.linkedin.com/in/nil-sanghani-8n1i4l1" target="_blank"><i
+                    class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/nilpatel43" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.instagram.com/nil_patel.435?igsh=MWp2dXhmZWZ4bDh0Nw==" target="_blank"><i
+                    class="fa-brands fa-instagram"></i></a>
+            <a href="" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+        <p class="copyright">
+            © 2026 Nil Sanghani | All Rights Reserved
+        </p>
+    </footer>
+
+</body>
+<script>
+    // --- Mobile Menu Toggle Function ---
+    const menuIcon = document.getElementById('menu-icon');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuIcon.onclick = () => {
+        navLinks.classList.toggle('active');
+        menuIcon.classList.toggle('fa-x');
+    }
+
+    // Menu close on click (for better UX)
+    function closeMenu() {
+        navLinks.classList.remove('active');
+        menuIcon.classList.remove('fa-x');
+    }
+
+    // --- WhatsApp Function ---
+    function sendToWhatsapp() {
+        let phoneNumber = "918141384325";
+
+        let name = document.getElementById('name').value;
+        let email = document.getElementById('email').value;
+        let mobile = document.getElementById('mobile').value;
+        let subject = document.getElementById('subject').value;
+        let message = document.getElementById('message').value;
+
+        if (!name || !email || !mobile || !subject || !message) {
+            alert("Please fill all details!");
+            return;
+        }
+
+        let url = "https://wa.me/" + phoneNumber + "?text="
+            + "*Name:* " + name + "%0a"
+            + "*Email:* " + email + "%0a"
+            + "*Mobile:* " + mobile + "%0a"
+            + "*Subject:* " + subject + "%0a"
+            + "*Message:* " + message;
+
+        window.open(url, '_blank').focus();
+    }
+</script>
+
+</html>
